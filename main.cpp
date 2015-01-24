@@ -22,12 +22,6 @@ int main(int argc, char** argv) {
 
 	TGAImage image(width, height, TGAImage::RGB);
 
-	for (int i=0; i<1000000; i++) {
-		line(13, 20, 80, 40, image, white);
-		line(20, 13, 40, 80, image, white);
-		line(80, 40, 13, 20, image, white);
-	}
-
 	for (int i = 0; i < model->nfaces(); i++) {
 		std::vector<int> face = model->face(i);
 		for (int j = 0; j < 3; j++) {
