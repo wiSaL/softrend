@@ -57,7 +57,7 @@ void line(int x0, int y0, int x1, int y1, TGAImage &image, TGAColor color) {
 
 	int dx = x1 - x0;
 	int dy = y1 - y0;
-	int derror2 = std::abs(dy)*2;
+	int derror2 = std::abs(dy) * 2;
 	int error2 = 0;
 	int y = y0;
 
@@ -67,6 +67,7 @@ void line(int x0, int y0, int x1, int y1, TGAImage &image, TGAColor color) {
 		} else {
 			image.set(x, y, color);
 		}
+
 		error2 += derror2;
 
 		if (error2 > dx) {
