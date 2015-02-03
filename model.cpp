@@ -2,12 +2,11 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-#include <vector>
+// #include <vector>
 #include "model.h"
 
 Model::Model(const char *filename) : verts_(), faces_() {
     std::ifstream in;
-    std::cout << filename << " : " << &filename << " : " << *filename << "\n";
     in.open (filename, std::ifstream::in);
     if (in.fail()) return;
     std::string line;
